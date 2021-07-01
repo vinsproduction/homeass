@@ -1,0 +1,69 @@
+title: System
+icon: mdi:gauge
+path: system
+cards:
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: button
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/home
+            icon: mdi:arrow-left-bold
+            icon_height: 30px
+            card_mod:
+                style: |
+                    ha-card {
+                        padding: 4px 0px !important;
+                    } 
+      - type: horizontal-stack
+        cards:
+          - type: entity
+            entity: sensor.date_time
+      - type: horizontal-stack
+        cards:
+          - type: entity
+            entity: sensor.online_custom
+      - type: horizontal-stack
+        cards:
+          - type: entity
+            entity: sensor.last_boot_custom
+      - type: horizontal-stack
+        cards:
+          - type: entity
+            entity: sensor.ipv4_address_eth0
+      - type: horizontal-stack
+        cards:
+          - type: entity
+            entity: sensor.speedtest_ping
+      - type: horizontal-stack
+        cards:
+          - type: gauge
+            entity: sensor.speedtest_download
+            min: 0
+            max: 100
+          - type: gauge
+            entity: sensor.speedtest_upload
+            min: 0
+            max: 100
+      - type: horizontal-stack
+        cards:
+          - type: gauge
+            entity: sensor.disk_use_percent
+            min: 0
+            max: 100
+          - type: gauge
+            entity: sensor.memory_use_percent
+            min: 0
+            max: 100
+      - type: horizontal-stack
+        cards:
+          - type: gauge
+            entity: sensor.processor_temperature
+            min: 0
+            max: 100
+          - type: gauge
+            entity: sensor.processor_use_percent
+            min: 0
+            max: 100

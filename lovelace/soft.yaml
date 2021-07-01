@@ -1,0 +1,30 @@
+title: Soft
+icon: mdi:download
+path: soft
+cards:
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: button
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/home
+            icon: mdi:arrow-left-bold
+            icon_height: 30px
+            card_mod:
+                style: |
+                    ha-card {
+                        padding: 4px 0px !important;
+                    } 
+      - type: horizontal-stack
+        cards:
+          - type: entities
+            entities:
+              - sensor.file_editor_newest_version
+              - sensor.file_editor_version
+              - sensor.home_assistant_operating_system_newest_version
+              - sensor.home_assistant_operating_system_version
+              - sensor.terminal_ssh_newest_version
+              - sensor.terminal_ssh_version
+              - sensor.hacs

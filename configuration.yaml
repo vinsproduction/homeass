@@ -1,0 +1,49 @@
+homeassistant:
+    name: Vins Home
+    latitude: !secret latitude_coord
+    longitude: !secret longitude_coord
+    elevation: 0
+    unit_system: metric
+    time_zone: Europe/Moscow
+
+# Стандартный набор для интерфейса
+default_config:
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+sensor: !include sensor.yaml
+recorder: !include recorder.yaml
+
+# телеграмм
+telegram_bot:
+  - platform: polling
+    api_key: !secret telegram_token
+    parse_mode: html
+    allowed_chat_ids:
+      - 52388348
+
+# иконки
+panel_iframe:
+    mdiindex:
+        title: MDI Icon Index
+        icon: mdi:vector-square
+        url: https://cdn.rawgit.com/james-fry/home-assistant-mdi/efd95d7a/home-assistant-mdi.html
+
+# Интерфейс карточек
+lovelace:
+  mode: yaml
+  resources:
+      - url: /hacsfiles/lovelace-card-mod/card-mod.js
+        type: module
+      - url: /hacsfiles/button-card/button-card.js
+        type: module
+      - url: /hacsfiles/mini-media-player/mini-media-player-bundle.js
+        type: module
+     
+     

@@ -1,0 +1,8 @@
+title: Home Assistant
+views:
+  - !include lovelace/home.yaml
+  - !include lovelace/switches.yaml
+  - !include lovelace/plan.yaml
+  - !include lovelace/media.yaml
+  - !include lovelace/system.yaml
+  - !include lovelace/soft.yaml

@@ -1,0 +1,29 @@
+title: Media
+icon: mdi:theater
+path: media
+cards:
+  - type: vertical-stack
+    cards:
+      - type: horizontal-stack
+        cards:
+          - type: button
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace/home
+            icon: mdi:arrow-left-bold
+            icon_height: 30px
+            card_mod:
+                style: |
+                    ha-card {
+                        padding: 4px 0px !important;
+                    } 
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-media-player
+            entity: media_player.playstation_4
+            artwork: cover
+            hide:
+              controls: true
+              power_state: true
+              source: true
+              volume: true

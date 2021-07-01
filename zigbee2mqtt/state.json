@@ -1,0 +1,16 @@
+{
+    "0x04cf8cdf3c77e630": {
+        "state": "ON",
+        "temperature": 30,
+        "power": 52.88,
+        "energy": 30.81,
+        "consumption": 30.81,
+        "voltage": 224,
+        "current": 0.2361,
+        "consumer_connected": true
+    },
+    "0x00158d00045a78f9": {
+        "voltage": 3042,
+        "battery": 100
+    }
+}

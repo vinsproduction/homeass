@@ -1,0 +1,22 @@
+db_url: !secret db_link
+purge_keep_days: 3
+auto_purge: true
+include:
+    entities:
+        - switch.0x04cf8cdf3c77e630
+        
+        # Сенсор объема
+        - sensor.home_assistant_v2_db
+        - sensor.maria_db
+
+        # Системные сенсоры
+        - sensor.processor_use
+        - sensor.cpu_temp
+        - sensor.memory_use_percent
+        - sensor.disk_use_percent
+        - sensor.disk_free
+        
+        # Интернет
+        - sensor.speedtest_download
+        - sensor.speedtest_upload
+        - sensor.speedtest_ping
